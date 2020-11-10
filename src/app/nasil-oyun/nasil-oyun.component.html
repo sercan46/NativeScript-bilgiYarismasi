@@ -1,0 +1,93 @@
+<ActionBar style="background-color: #e24747;">
+  <Label style="color: white;" text="How To Play"></Label>
+  <NavigationButton
+    text="Go Back"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+</ActionBar>
+
+<StackLayout>
+  <Image src="~/assets/nasil.jpg"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout columns="*" rows="*" style="margin-top: 200vh;">
+    <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          style="text-align: center; font-weight: bold; color: crimson;"
+          text="5+3"
+          class="m-b-10"
+        ></Label>
+        <Label
+          style="font-weight: bold; color: darkmagenta;"
+          text="What is the Purpose of the Game"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="The name of the game is 5 + 3. It is a 5+3 knowledge contest. Questions are asked on many issues and on many challenges. With this game you will have gained a lot of experience in information."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold; color: darkmagenta;"
+          text="Scoring System"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="Your score increases for every question you know in the game. The scores that affect the score vary according to the difficulty of the problem."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold; color: darkred;"
+          text="Easy Question :        +5"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold; color: darkred;"
+          text="Medium Question : +10"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold; color: darkred;"
+          text="Hard Question :       +25"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          style="font-weight: bold; color: darkmagenta;"
+          text="Number Of Misinformation"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="You have a total of 5 times the right to know wrong in the game. Your score is reset after you know it wrong 5 times."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          style="font-weight: bold; color: darkmagenta;"
+          text="Number Of Passes"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="You have 3 passes in the game. When you click on the Pas button, it will ask you a new question."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+      </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

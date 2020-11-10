@@ -1,0 +1,38 @@
+<ActionBar style="background-color: #e24747;">
+
+    <Label style="color:white" text="Questions"></Label>
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()">
+        </NavigationButton>
+
+  </ActionBar>
+<GridLayout rows="50,50,60,100,175,50,60,50">
+    <GridLayout style="margin-left: 45%;"  columns="40,50" row="0" class="flexClass">
+        <Image col="0" src="~/assets/health.png " style="width: 100%; height: 100%;" ></Image>
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:firebrick;" col="1" [text]="hakSayisi"></Label>
+    </GridLayout>
+    <GridLayout style="margin-left: 22%; background-color:aquamarine ;margin-right: 25%; text-align: center;" columns="70,80" row="1" class="flexClass">
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:firebrick;" col="0" text="Type ->"></Label>
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:firebrick;" col="1" [text]="type"></Label>
+    </GridLayout>
+    <GridLayout style="margin-left: 22%;background-color:aquamarine;margin-right: 25%; text-align: center;" columns="100,90" row="2" class="flexClass">
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:firebrick;" col="0" text="Difficulty ->"></Label>
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:firebrick;" col="1" [text]="difficulty"></Label>
+    </GridLayout>
+<Label style="margin-left: 15vh; margin-right: 15vh; font-size: 18px; padding-top: 15vh;" row="3" textWrap="true" [text]="question"></Label>
+<ListView  row="4" (itemTap)="onItemTap($event)" [items]="answers" style="background-color:crimson; text-align: center; margin-left: 15vh; margin-right: 15vh; font-size: 13px;" separatorColor="white">
+    <ng-template  let-item="item" >
+      <GridLayout >
+          <Label [text]="item" class="list-group-item" color="white"></Label>
+      </GridLayout>
+    </ng-template>
+    </ListView>
+
+    <GridLayout   style="margin-left: 38%;"  columns="60,50"  row="5" class="flexClass">
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:forestgreen;" col="0" text="Score:"></Label>
+        <Label style="padding-top:15vh; padding-left: 5vh; font-size: 18px;font-weight: bold;color:forestgreen;" col="1" [text]="score"></Label>
+    </GridLayout>
+    <Label row="6" style="padding-top:15vh; padding-left: 5vh; font-size: 20px;font-weight: bold;color:maroon; text-align: center;" [text]="pas"></Label>
+
+        <Button  row="7" style=" padding-left: 5vh; font-size: 18px;font-weight: bold;color:white; background-color: darkred;" text="Pass" isEnabled="{{pas>0}}" (tap)="pasDus()"></Button>
+</GridLayout>
+<ActivityIndicator [busy]="isBusy" ></ActivityIndicator>

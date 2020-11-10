@@ -1,0 +1,18 @@
+.page {
+    background-color: rgb(237, 237, 237);
+  }
+
+  .cardStyle {
+    background-color: #fff;
+    color: rgb(43, 43, 43);
+    border-color: darkblue;
+    border-width: 2px;
+  }
+
+  .cardContent {
+    margin: 10;
+    padding: 5;
+    font-size: 15;
+    height: 140vh;
+    color:  #2f4f4f;
+  }

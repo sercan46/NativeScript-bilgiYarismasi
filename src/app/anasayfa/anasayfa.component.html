@@ -1,0 +1,17 @@
+<ActionBar style="background-color: #e24747;">
+
+    <ActionItem (tap)="changeMode()"
+    ios.systemIcon="16" ios.position="right"
+    [text]="mode"  android.position="popup">
+         <Switch checked="true"  style="background-color:black;" (checkedChange)="onCheckedChange($event)"></Switch>
+</ActionItem>
+    <Label style="color:white" text="Main Page"></Label>
+  </ActionBar>
+<GridLayout style="margin-top: 100vh;"  rows="120,120,120" columns="*,*">
+    <Button style="height: 100vh; background-color: tan; font-weight: bold" row="0" col="0" text="Start The Game" class="btn btn-primary" (tap)="sorular()"></Button>
+    <Button  style="height: 100vh; background-color: tan; font-weight: bold;" row="0" col="1" text="How To Play" class="btn btn-primary" (tap)="nasilOynanir()"></Button>
+    <Button style="height: 100vh; background-color: tan; font-weight: bold;  margin-top: 40vh;" row="1" col="0" text="Follow Me" class="btn btn-primary" (tap)="takipEt()"></Button>
+    <Button style="height: 100vh; background-color: tan; font-weight: bold;  margin-top: 40vh;" row="1" col="1" text="Share" class="btn btn-primary" (tap)="paylas()"></Button>
+    <Button style="height: 100vh; background-color: tan; font-weight: bold;  margin-top: 80vh;" row="2" col="0" text="Contact Us" class="btn btn-primary" (tap)="mailGonder()"></Button>
+    <Button style="height: 100vh; background-color:crimson;; font-weight: bold;  margin-top: 80vh;" row="2" col="1" text="Exit" class="btn btn-primary" (tap)="mailGonder()"></Button>
+</GridLayout>

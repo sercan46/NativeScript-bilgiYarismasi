@@ -1,0 +1,14 @@
+/* Add mobile styles for the component here.  */
+.third {
+    background-color: lime;
+}
+.flexClass{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        align-content: center;
+
+}
